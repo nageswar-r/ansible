@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_files:
-    -course.yml
+    - course.yml
   tasks:
     - name: print variables
       vars:
