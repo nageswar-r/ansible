@@ -1,5 +1,6 @@
 - name: restart nginx service
   hosts: web
+  become: yes
   tasks:
     - name: nginx service restart
       ansible.builtin.service:
