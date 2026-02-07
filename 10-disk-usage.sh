@@ -3,7 +3,7 @@
   connection: local
   tasks:
     - name: Run df -h
-      command: "df -h -t nfs"
+      command: "df -hT | grep -i tmfs"
       register: disk_usage
     - name: Show disk usage
       debug: 
