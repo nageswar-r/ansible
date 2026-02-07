@@ -1,5 +1,5 @@
 - name: collecting disk usage
-  hosts: local
+  hosts: local,web
   connection: local
   tasks:
     - name: Run df -h
