@@ -9,7 +9,6 @@
       debug: 
         # msg: "{{ inventory_hostname }}:\n{{ tmpfs_usage.stdout | default('No tmpfs mounts found') }}"
         var: tmpfs_usage.stdout_lines
-  tasks:
     # - name: Check if nginx is installed
     #   command: nginx -v
     #   register: nginx_check
