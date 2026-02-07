@@ -8,4 +8,5 @@
 
     - name: Show disk usage
       debug: 
-        msg: "{{ inventory_hostname }}:\n{{ tmpfs_usage.stdout | default('No tmpfs mounts found') }}"
+        # msg: "{{ inventory_hostname }}:\n{{ tmpfs_usage.stdout | default('No tmpfs mounts found') }}"
+        var: tmpfs_usage.stdout_lines
