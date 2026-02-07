@@ -6,5 +6,5 @@
       command: df -h
       register: disk_usage
     - name: Show disk usage
-      dedug: 
+      debug: 
         var: disk_usage.stdout_lines
