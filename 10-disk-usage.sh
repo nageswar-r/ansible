@@ -3,8 +3,9 @@
   connection: local
   tasks:
     - name: Run df -h
-      command: "df -hT | grep -i tmpfs"
-      register: disk_usage
+      shell: df -hT | grep -i tmpfs || true
+      register: tmpfs_usage
+
     - name: Show disk usage
       debug: 
-        var: disk_usage.stdout_lines
+        var: tmpfs_usage.stdout_lines
