@@ -1,6 +1,5 @@
 - name: install packages
-  hosts: web, local
-  connection: local
+  hosts: web
   become: yes
   tasks:
     - name: install packages
