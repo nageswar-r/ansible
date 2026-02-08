@@ -14,3 +14,7 @@
       ansible.builtin.service:
         name: nginx
         state: restarted
+    - name: Restart nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: stopped
