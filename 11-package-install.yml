@@ -14,7 +14,11 @@
       ansible.builtin.service:
         name: nginx
         state: restarted
-    - name: Restart nginx service
+    - name: Stop nginx service
       ansible.builtin.service:
         name: nginx
         state: stopped
+    - name: Uninstall nginx service
+      ansible.builtin.package:
+        name: nginx
+        state: absent
