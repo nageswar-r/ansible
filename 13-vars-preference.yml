@@ -4,8 +4,8 @@
   vars_files:
     - course.yml
   vars:
-    name: NAME
+    name: COURSE
   tasks:
     - name: Print varibles name
       ansible.builtin.debug:
-        msg: "{{ NAME }}"
+        msg: "{{ COURSE }}"
