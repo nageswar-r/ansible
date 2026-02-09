@@ -6,7 +6,7 @@
   vars_files: course.yml
     name: NAME
   vars_prompt:
-  - name: NAME
+  # - name: NAME
     prompt: Please enter name
     private: false
   tasks:
