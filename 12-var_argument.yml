@@ -5,4 +5,4 @@
   tasks: 
     - name: printing the passed Arguments
       ansible.builtin.debug:
-        msg: "Hi {{ Name }}, Good Morning"
+        msg: "Hi {{ NAME }}, Good Morning"
