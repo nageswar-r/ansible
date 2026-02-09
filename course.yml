@@ -1,3 +1,4 @@
 COURSE: "Ansible from DevOps"
 TRAINER: "Sivakumar Reddy"
 DURATION: "140HRS"
+NAME: "This is from vars file"

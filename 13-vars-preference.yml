@@ -3,7 +3,9 @@
   connection: local
   vars_files:
     - course.yml
+  vars:
+    name: NAME
   tasks:
-    - name: Print course name
+    - name: Print varibles name
       ansible.builtin.debug:
-        msg: "{{ COURSE }}"
+        msg: "{{ NAME }}"
