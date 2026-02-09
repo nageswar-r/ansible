@@ -1,17 +1,9 @@
-- name: vars preference
+- name: Arguments from script file
   hosts: local
   connection: local
-  vars:
-    NAME: "Ansible from PLAY"
-  vars_files: course.yml
-    name: NAME
-  vars_prompt:
-  # - name: NAME
-    prompt: Please enter name
-    private: false
+  vars_files:
+    - course.yml
   tasks:
-  - name: print name
-    vars:
-      NAME: "Ansible from Task"
-    ansible.builtin.debug:
-      msg: "Hi {{ NAME }}"
+    - name: Print course name
+      ansible.builtin.debug:
+        msg: "{{ COURSE }}"
