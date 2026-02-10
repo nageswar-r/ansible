@@ -5,6 +5,10 @@
   #   - course.yml
   vars:
     COURSE: "DevSecOPS from script"
+  vars_prompt:
+    - name: COURSE
+      prompt: Please enter course name
+      private: false
   tasks:
     - name: Print varibles name
       ansible.builtin.debug:
