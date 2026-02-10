@@ -1,8 +1,8 @@
 - name: Arguments from script file
   hosts: local
   connection: local
-  # vars_files:
-  #   - course.yml
+  vars_files:
+    - course.yml
   vars:
     COURSE: "DevSecOPS from script"
   vars_prompt:
