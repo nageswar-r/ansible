@@ -11,5 +11,7 @@
       private: false
   tasks:
     - name: Print varibles name
+      vars:
+        COURSE: "Ansible from Task"
       ansible.builtin.debug:
         msg: "{{ COURSE }}"
