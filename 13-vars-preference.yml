@@ -4,7 +4,7 @@
   vars_files:
     - course.yml
   vars:
-    name: COURSE
+    COURSE: "DevSecOPS from script"
   tasks:
     - name: Print varibles name
       ansible.builtin.debug:
