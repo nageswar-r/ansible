@@ -8,3 +8,10 @@
   - name: print output 
     ansible.builtin.debug:
       msg: "{{ users_output }}"
+  - name: Change directory and check for the log files
+    ansible.builtin.shell: 
+      cmd: ls -ltrh | grep log > test.txt
+      chdir : /var/log/
+    register: test_file_output
+    ansible.builtin.debug:
+      msg: "{{ test_file_output }}"
