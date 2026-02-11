@@ -11,7 +11,7 @@
       msg: "{{ users_output }}"
   - name: Change directory and check for the log files
     ansible.builtin.shell: 
-      cmd: ls -ltrh | grep log > test.txt
+      cmd: ls -ltrh | grep log
       chdir : /var/log/
     register: test_file_output
   - name: print files output
