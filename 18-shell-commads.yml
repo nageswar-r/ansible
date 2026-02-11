@@ -1,0 +1,10 @@
+- name: shell commands usage
+  hosts: local
+  connection: local
+  tasks:
+  - name: command module test 
+    ansible.builtin.shell: cat /etc/passwd | grep root
+    register: users_output
+  - name: print output 
+    ansible.builtin.debug:
+      msg: "{{ users_output }}"
