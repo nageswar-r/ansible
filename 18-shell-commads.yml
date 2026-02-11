@@ -16,4 +16,4 @@
     register: test_file_output
   - name: print files output
     ansible.builtin.debug:
-      msg: "{{ test_file_output }}"
+      msg: "{{ test_file_output.stdout }}"
