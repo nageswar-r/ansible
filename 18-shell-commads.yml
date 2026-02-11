@@ -13,5 +13,6 @@
       cmd: ls -ltrh | grep log > test.txt
       chdir : /var/log/
     register: test_file_output
+  - name: print files output
     ansible.builtin.debug:
       msg: "{{ test_file_output }}"
