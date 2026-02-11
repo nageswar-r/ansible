@@ -8,5 +8,9 @@
   tasks:
     - name: Print info upon checking the condition
       ansible.builtin.debug:
-      msg: "Enter number is greater than 10"
-    when: {{ NUMBER }} < 10
+        msg: "Enter number is greater than 10"
+      when: NUMBER | int > 10
+    - name: Print info if numner is less than or equal to 10
+      ansible.builtin.debug:
+        msg: "Enter number is less than or equal to 10"
+      whne: NUMBER | int <= 10
