@@ -13,4 +13,4 @@
     - name: Print info if numner is less than or equal to 10
       ansible.builtin.debug:
         msg: "Enter number is less than or equal to 10"
-      whne: NUMBER | int <= 10
+      when: NUMBER | int <= 10
